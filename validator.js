@@ -7,9 +7,9 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-rl.question('yourname', (name) => {
-  rl.question('your mobile: ', (mobile) => {
-    rl.question('your email', (email) => {
+rl.question('yourname :', (name) => {
+  rl.question('your mobile : ', (mobile) => {
+    rl.question('your email :', (email) => {
       const isMobileValid = validator.isMobilePhone(mobile, 'id-ID');
       const isEmailValid = validator.isEmail(email);
 
