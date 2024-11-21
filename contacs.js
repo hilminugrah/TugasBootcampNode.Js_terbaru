@@ -18,14 +18,14 @@ rl.question('Nama: ', (name) => {
     }
 
     // Menanyakan email pengguna
-    rl.question('Email: ', (mail) => {
+    rl.question('Email: ', (email) => {
       // Memeriksa apakah email valid
-      if (!validator.isEmail(mail)) {
+      if (!validator.isEmail(email)) {
         console.log('Email Anda tidak valid'); // Jika tidak valid, tampilkan pesan
       }
 
       // Membuat objek kontak baru berdasarkan input pengguna
-      const newContact = { name, phone, mail };
+      const newContact = { name, phone, email };
 
       // Membaca data kontak yang sudah ada di file atau memulai dengan array kosong
       var contacts = []; // Inisialisasi array kosong
