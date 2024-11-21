@@ -25,6 +25,10 @@ rl.question('yourname', (name) => {
         email,
       };
 
+      const contacts = JSON.parse(
+        fs.readFileSync("data/contact.json", "utf-8")
+      )
+
       fs.writeFileSync("data/contact.json", JSON.stringify(contact));
 
       rl.close()
