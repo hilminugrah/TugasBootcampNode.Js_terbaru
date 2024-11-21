@@ -1,12 +1,14 @@
 const readline = require('node:readline'); // Import modul readline untuk input dari terminal
-const validator = require('validator');   // Import modul validator untuk validasi data
-const fs = require('fs');                 // Import modul fs untuk bekerja dengan file
+const validator = require('validator'); // Import modul validator untuk validasi data
+const fs = require('fs'); // Import modul fs untuk bekerja dengan file
+const { rejects } = require('node:assert');
 
 // Membuat antarmuka terminal untuk input pengguna
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
+
 
 // Menanyakan nama pengguna
 rl.question('Nama: ', (name) => {
@@ -30,14 +32,13 @@ rl.question('Nama: ', (name) => {
       // Membaca data kontak yang sudah ada di file atau memulai dengan array kosong
       var contacts = []; // Inisialisasi array kosong
 
-      if(fs.existsSync('data/contact.json')) {
+      if (fs.existsSync('data/contact.json')) {
         const fileContent = fs.readFileSync('data/contact.json', 'utf-8'); // Baca isi file
         contacts = JSON.parse(fileContent); // Ubah string JSON menjadi array
-      
       } else {
         fs.writeFileSync('data/contact.json', JSON.stringify(contacts, null, 2), 'utf-8');
       }
-       
+
       // Menambahkan kontak baru ke daftar kontak yang sudah ada
       contacts.push(newContact);
 
