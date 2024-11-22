@@ -1,3 +1,4 @@
+const funct = require("./funct")
 const yargs = require("yargs");
 
 yargs.command({
@@ -26,6 +27,7 @@ yargs.command({
       mobile: argv.mobile,
       email: argv.email,
     };
+    funct.newContact(contact);
     console.log(contact);
   },
 });
