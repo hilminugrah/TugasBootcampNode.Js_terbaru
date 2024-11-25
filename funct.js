@@ -32,7 +32,9 @@ function newContact(contact) {
 
     // Menyimpan kembali array kontak ke file dalam format JSON
     fs.writeFileSync("data/contact.json", JSON.stringify(contacts, null, 2), 'utf-8');
+
 }
+
 
 // Mengekspor fungsi dan objek yang diperlukan agar dapat digunakan di file lain
 module.exports = { newContact, question, rl, validator };
