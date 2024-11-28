@@ -14,7 +14,7 @@ http
             } else if (url === '/contact') {
             renderHtml(".views/contact.html", res)
             } else {
-              res.writeHead(404, { 'content-type': 'text/html' });
+              res.writeHead(200, { 'content-type': 'text/html' });
               res.write('hello world');
               res.end();
             }
