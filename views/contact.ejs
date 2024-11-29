@@ -13,18 +13,21 @@
             <tr>
                 <th>name</th>
                 <th>mobile</th>
+                <th>email</th>
             </tr>
         </thead>
         <tbody>
-            <% cont.forEach(contact=> { %>
+            <% item.forEach(contact=> { %>
                <tr>
-                <td> <%= contact. nama%> </td>
-                <td> <%= contact. mobile %> </td>
+                <td> <%= contact.name%> </td>
+                <td> <%= contact.mobile%> </td>
+                <td> <%= contact.email %></td>
             </tr> 
             <% }) %>
             
         </tbody>
     </table>
     
+
 </body>
 </html>
