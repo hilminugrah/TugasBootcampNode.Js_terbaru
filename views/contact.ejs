@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>ini adalah contact</p>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>mobile</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% cont.forEach(contact=> { %>
+               <tr>
+                <td> <%= contact. nama%> </td>
+                <td> <%= contact. mobile %> </td>
+            </tr> 
+            <% }) %>
+            
+        </tbody>
+    </table>
+    
+</body>
+</html>
