@@ -4,8 +4,28 @@ const port = 3000;
 const path = require('path')
 const fs = require('fs')
 const filefath = ('data/contact.json');
-
+const expressLayouts = require('express-ejs-layouts');
+const { title } = require('process');
+const morgan = require('morgan')
 app.set("view engine", "ejs");
+
+
+// app.use(express.static("public"))
+// app.use(morgan("dev"))
+
+
+// app.use((req,res,next) => {
+//   console.log("Time:",Date.now());
+//   next()
+// })
+
+
+
+// Gunakan express-ejs-layouts
+// app.use(expressLayouts);
+
+// Atur folder views (opsional, default adalah './views')
+// app.set('views', './views');
 
 app.get('/', (req, res) => {
     // res.sendFile('views/index.html', { root: __dirname });
@@ -39,8 +59,9 @@ app.get("/contact",(req,res) => {
    if(fs.existsSync(filefath)){
     cont = JSON.parse(fs.readFileSync(filefath,'utf-8'))
    }
-    res.render("contact", {item: cont});
+    res.render("contact", {cont ,title : 'halaman utama'}  );
 })
+// {item: cont}
 
   
 
