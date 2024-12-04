@@ -1,127 +1,24 @@
 [
   {
-    "name": "hilmi",
-    "mobile": "003",
-    "email": "hilminugrahs@gmail.com"
+    "id": 1,
+    "name": "Hilmi nugrahe",
+    "email": "hilminugraha803@gmail.com"
   },
   {
-    "name": "hilmi",
-    "mobile": "087",
-    "email": "hilmy@gmail.com"
+    "id": 3,
+    "name": "HILMI NUGRAHA",
+    "email": "hilminugraha803@gmail.com"
   },
   {
-    "name": "hilmi",
-    "mobile": "089",
-    "email": "hilminugrahs@gmail.com"
-  },
-  {
-    "name": "hilmy",
-    "mobile": "081",
-    "email": "nugrafs@gmailcom"
-  },
-  {
-    "name": "hilmy",
-    "mobile": "081",
-    "email": "hilmynugrahs@gmail.com"
-  },
-  {
-    "name": "hilmi",
+    "id": 4,
+    "name": "HILMI NUGRAHA",
     "mobile": "081770636113",
-    "email": "hilminugrahs@gmail.com"
+    "email": "hilminugraha803@gmail.com"
   },
   {
-    "name": "hilmy",
+    "id": 5,
+    "name": "HILMI NUGRAHA",
     "mobile": "081770636112",
-    "mail": "hilminugrahs@gmail.com"
-  },
-  {
-    "name": "hilmi",
-    "mobile": "081770636113",
-    "email": "hilminugrahs@gmail.com"
-  },
-  {
-    "name": "yanto",
-    "mobile": "081770636112",
-    "email": "hilminugrahs@gmail.com"
-  },
-  {
-    "name": "yanto",
-    "mobile": "081770636112",
-    "email": "yantos@gmail.com"
-  },
-  {
-    "name": "hilman",
-    "mobile": "081770636543",
-    "email": "hilmannugrahs@gmail.com"
-  },
-  {
-    "name": "hils",
-    "mobile": "08777",
-    "email": "ba"
-  },
-  {
-    "name": "abdul",
-    "mobile": "098",
-    "email": "hhh"
-  },
-  {
-    "name": "abdul",
-    "mobile": "098",
-    "email": "hhh"
-  },
-  {
-    "name": "abdul",
-    "mobile": "098",
-    "email": "hhh"
-  },
-  {
-    "name": "abdul",
-    "mobile": "098",
-    "email": "hhh"
-  },
-  {
-    "name": "abdul",
-    "mobile": "098",
-    "email": "hhh"
-  },
-  {
-    "name": "abdul",
-    "mobile": "098",
-    "email": "hhh"
-  },
-  {
-    "name": "abdul",
-    "mobile": "098",
-    "email": "hhh"
-  },
-  {
-    "name": "abdul",
-    "mobile": "098",
-    "email": "hhh"
-  },
-  {
-    "nama": "charlie",
-    "mobile": "099",
-    "email": "erwan@gmail.com"
-  },
-  {
-    "name": "abu",
-    "mobile": "098",
-    "email": "nugrahaa@gmail.com"
-  },
-  {
-    "name": "abu",
-    "mobile": "098",
-    "email": "nugrahaa@gmail.com"
-  },
-  {
-    "name": "abu",
-    "mobile": "098",
-    "email": "nugrahaa@gmail.com"
-  },
-  {
-    "name": "abu",
-    "mobile": "098",
-    "email": "nugrahaa@gmail.com"
+    "email": "hilminugraha803@gmail.com"
   }
 ]
