@@ -1,143 +1,26 @@
 [
   {
+    "id": 1,
+    "name": "HILMI NUGRAH",
+    "mobile": "y",
+    "email": "hilminugraha803@gmail.com"
+  },
+  {
+    "id": 2,
+    "name": "HILMI NUGRAHA",
+    "mobile": "081770636113",
+    "email": "hilminugraha803@gmail.com"
+  },
+  {
     "id": 3,
     "name": "HILMI NUGRAHA",
-    "mobile": "081770636119",
+    "mobile": "y",
     "email": "hilminugraha803@gmail.com"
   },
   {
     "id": 4,
-    "name": "HILMI NUGRAHA",
-    "mobile": "081770636113",
-    "email": "hilminugraha803@gmail.com"
-  },
-  {
-    "id": 5,
-    "name": "HILMI NUGRAHA",
-    "mobile": "081770636113",
-    "email": "hilminugraha803@gmail.com"
-  },
-  {
-    "id": 6,
-    "name": "HILMI NUGRAH",
+    "name": "HILMIs",
     "mobile": "081770636118",
-    "email": "hilminugraha803@gmail.com"
-  },
-  {
-    "id": 7,
-    "name": "rojak",
-    "mobile": "081770636113",
-    "email": "hilminugraha803@gmail.com"
-  },
-  {
-    "id": 8,
-    "name": "gani ",
-    "mobile": "081770636111",
-    "email": "ganisetiawan@gmail.com"
-  },
-  {
-    "id": 9,
-    "name": "hilmy nugraha",
-    "mobile": "9999",
-    "email": "hilminugraha803@gmail.com"
-  },
-  {
-    "id": 10,
-    "name": "h",
-    "mobile": "998",
-    "email": "jjjj@gmi"
-  },
-  {
-    "id": 11,
-    "name": "HILMI NUGRAH",
-    "mobile": "081770636113",
-    "email": "hilminugraha803@gmail.com"
-  },
-  {
-    "name": "HILMI NUGRAHA",
-    "mobile": "081770636113"
-  },
-  {
-    "name": "HILMI NUGRAHA",
-    "mobile": "08177063611"
-  },
-  {
-    "name": "asep",
-    "mobile": "081770636113"
-  },
-  {
-    "name": "HILMI NUGRAH",
-    "mobile": "081770636113"
-  },
-  {
-    "name": "HILMI NUGRAH",
-    "mobile": "081770636113"
-  },
-  {
-    "name": "HILMI NUGRAHA",
-    "mobile": "08177063611"
-  },
-  {
-    "name": "HILMI NUGRAHA",
-    "mobile": "081770636113"
-  },
-  {
-    "name": "HILMI NUGRAHA",
-    "mobile": "081770636113"
-  },
-  {
-    "name": "HILMI NUGRAHA",
-    "mobile": "081770636113"
-  },
-  {
-    "name": "HILMI NUGRAHA",
-    "mobile": "081770636113"
-  },
-  {
-    "name": "HILMI NUGRAHA",
-    "mobile": "081770636113",
-    "email": "hilminugraha803@gmail.com"
-  },
-  {
-    "name": "HILMI NUGRAHA",
-    "mobile": "081770636113",
-    "email": "hilminugraha803@gmail.com"
-  },
-  {
-    "name": "HILMI NUGRAHA",
-    "mobile": "081770636113",
-    "email": "hilminugraha803@gmail.com"
-  },
-  {
-    "name": "HILMI NUGRAHA",
-    "mobile": "081770636113",
-    "email": "hilminugraha803@gmail.com"
-  },
-  {
-    "name": "HILMI NUGRAHi",
-    "mobile": "081770636113",
-    "email": "hilminugraha803@gmail.com"
-  },
-  {
-    "name": "HILMI NUGRAHA",
-    "mobile": "081770636113",
-    "email": "hilminugraha803@gmail.com"
-  },
-  {
-    "name": "HILMI NUGRAHA",
-    "mobile": "081770636113",
-    "email": "hilminugraha803@gmail.com"
-  },
-  {
-    "id": null,
-    "name": "HILMI NUGRAHA",
-    "mobile": "081770636113",
-    "email": "hilminugraha803@gmail.com"
-  },
-  {
-    "id": 1,
-    "name": "HILMI NUGRAHs",
-    "mobile": "081770636113",
     "email": "hilminugraha803@gmail.com"
   }
 ]
