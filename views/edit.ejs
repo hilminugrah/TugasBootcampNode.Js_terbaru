@@ -7,10 +7,10 @@
 </head>
 <body>
   <h1>Edit User</h1>
-  <form action="/edit/<%= user.id %>" method="POST">
-    <label>Name: <input type="text" name="name" value="<%= user.name %>" required></label><br>
-    <label>Name: <input type="text" name="name" value="<%= user.mobile %>" required></label><br>
-    <label>Email: <input type="email" name="email" value="<%= user.email %>" required></label><br>
+  <form action="/edit/<%= //user.id %>" method="POST">
+    <label>Name: <input type="text" name="name" value="<%= //user.name %>" required></label><br>
+    <label>Name: <input type="text" name="name" value="<%= //user.mobile %>" required></label><br>
+    <label>Email: <input type="email" name="email" value="<%=// user.email %>" required></label><br>
     <button type="submit">Submit</button>
   </form>
   <a href="/">Back</a>
@@ -45,5 +45,7 @@
       <a href="/" class="btn btn-secondary">Cancel</a>
     </form>
   </div>
+
+<script src="validate.js"></script>
 </body>
 </html>

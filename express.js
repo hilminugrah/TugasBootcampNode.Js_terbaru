@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 2000;
 const path = require('path');
 const fs = require('fs');
 const filefath = 'data/contact.json';
@@ -8,6 +8,11 @@ const expressLayouts = require('express-ejs-layouts');
 const { title } = require('process');
 const morgan = require('morgan');
 const bodyParser = require("body-parser");
+const router = express.Router();
+// const { validateInput } = require('./validate');
+
+// const { validateForm } = require('create');
+
 
 
 // Middleware
@@ -27,12 +32,49 @@ app.get("/", (req, res) => {
   const users = readData();
   res.render("index", { users });
 });
+// validasi create
+// app.post('/create', validateInput, (req, res) => {
+//   const { id , name, mobile, email } = req.body;
+
+//   const data = require('./data/contact.json');
+//   data.push({id , name, mobile, email });
+
+//   // Simpan kembali ke file JSON
+//   fs.writeFileSync('./data/contact.json', JSON.stringify(data, null, 2));
+
+//   res.send('Data berhasil ditambahkan!');
+// });
+// // end validasi create
+
+// // validasi add
+// app.post('/edit/:id', validateInput, (req, res) => {
+//   const { id } = req.params;
+//   const { name, mobile, email } = req.body;
+
+//   const data = require('./data/contact.json');
+//   const index = data.findIndex(item => item.id === id);
+
+//   if (index === -1) {
+//       return res.status(404).send('Data tidak ditemukan!');
+//   }
+
+//   // Update data
+//   data[index] = { name, mobile, email };
+
+//   // Simpan kembali ke file JSON
+//   const fs = require('fs');
+//   fs.writeFileSync('./data/contact.json', JSON.stringify(data, null, 2));
+
+//   res.send('Data berhasil diperbarui!');
+// });
+
+//end validasi add
 
 app.get("/create", (req, res) => {
   res.render("create");
 });
 
-app.post("/create", (req, res) => {
+app.post("/create",  (req, res) => {;
   const users = readData();
   const newUser = {
     id: users.length ? users[users.length - 1].id + 1 : 1,
@@ -51,7 +93,14 @@ app.get("/edit/:id", (req, res) => {
   res.render("edit", { user });
 });
 
-app.post("/edit/:id", (req, res) => {
+app.post("/edit/:id", (req, res) => { 
+  // const { name, mobile, email } = req.body;
+  // const errors = validateForm({ name, mobile, email });
+
+  // if (Object.keys(errors).length > 0) {
+  //     // Jika ada error, tampilkan form kembali dengan pesan error
+  //     return res.render('add', { errors, data: { name, mobile, email } });
+  // }
   const users = readData();
   const userIndex = users.findIndex((u) => u.id == req.params.id);
   if (userIndex > -1) {
@@ -66,12 +115,42 @@ app.post("/edit/:id", (req, res) => {
   res.redirect("/");
 });
 
-app.post("/delete/:id", (req, res) => {
+// app.post('/delete/:id', (req, res) => {//   
+//   const { id } = req.params; // Ambil ID dari parameter URL
+//   const data = require('./data/contact.jsonjson'); // Ambil data dari file JSON
+
+//   // Cari index data berdasarkan ID
+//   const index = data.findIndex(item => item.id === id);
+
+//   if (index === -1) {
+//       return res.status(404).send('Data tidak ditemukan!');
+//   }
+
+//   // Hapus data dari array
+//   data.splice(index, 1);
+
+//   // Simpan kembali ke file JSON
+//   const fs = require('fs');
+//   fs.writeFileSync('./data/contact.json', JSON.stringify(data, null, 2));
+
+//   res.send('Data berhasil dihapus!');
+// });
+
+
+
+ app.post("/delete/:id", (req, res) => {
   const users = readData();
-  const filteredUsers = users.filter((u) => u.id != req.params.id);
-  writeData(filteredUsers);
-  res.redirect("/");
-});
+   const filteredUsers = users.filter((u) => u.id != req.params.id);
+   writeData(filteredUsers);
+   res.redirect("/");
+ });
+
+// app.get("detail" , (req,res) => {
+//   const users = readData();
+//   const filtered = users.filter((u) => u.id != req.params.id);
+//   writeData(filtered);
+//   res.redirect("/")
+// })
 
 // app.use(express.static("public"))
 // app.use(morgan("dev"))
@@ -89,44 +168,55 @@ app.post("/delete/:id", (req, res) => {
 
 
 
-// app.get('/', (req, res) => {
-  // res.sendFile('views/index.html', { root: __dirname });
-  // res.render('index')
-//   const nama = 'hilmi nugraha';
-//   res.render('index', { nama });
-// });
+//  app.get('/', (req, res) => {
+//    res.sendFile('views/index.html', { root: __dirname });
+//    res.render('index')
+//    const nama = 'hilmi nugraha';
+//    res.render('index', { nama });
+//  });
 
-// app.get('/about', (req, res) => {
-  // res.sendFile('views/about.html', { root: __dirname });
-//   res.render('about');
-// });
+app.get('/about', (req, res) => {
+  res.sendFile('views/about.html', { root: __dirname });
+  res.render('about');
+});
 
-// app.get('/contact', (req, res) => {
-  // res.sendFile('views/contact.html', { root: __dirname });
-  // res.render('contact')
-  //   cont = [{
-  //      nama: "hilmi",
-  //      mobile: "0812232433",
-  //   },
-  //   {
-  //     nama: "hilmi",
-  //     mobile: "0812232433",
-  //  },
-  //  {
-  //     nama: "hilmi",
-  //      mobile: "081223243[3",
-  //  }
-  //   ]
-//   let cont = []
-//    if(fs.existsSync(filefath)){
-//     cont = JSON.parse(fs.readFileSync(filefath,'utf-8'))
-//    }
-//    cont = JSON.parse(fs.readFileSync(filefath, 'utf-8'));
-//   res.render('contact', {item: cont} );
-// });
-// {item: cont}
-// { cont, title: 'contact' }
+app.get('/contact' , (req, res) => {
+  res.sendFile('views/contact.html', { root: __dirname});
+  res.render('contact')
+})
+
+ app.get('/contact', (req, res) => {
+   res.sendFile('views/contact.html', { root: __dirname });
+   res.render('contact')
+     cont = [{
+       nama: "hilmi",
+        mobile: "0812232433",
+    },
+     {
+       nama: "hilmi",
+       mobile: "0812232433",
+   },
+    {
+       nama: "hilmi",
+        mobile: "081223243[3",
+    }
+     ]
+  let cont = []
+   if(fs.existsSync(filefath)){
+    cont = JSON.parse(fs.readFileSync(filefath,'utf-8'))
+    }
+    cont = JSON.parse(fs.readFileSync(filefath, 'utf-8'));
+   res.render('contact', {item: cont}  );
+ });
+//  {item: cont}
+//  { cont, title ; 'contact' }
+
+// app.use ((req,res)=>{
+//   req.send('not found 404')
+// })
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
+
+// module.exports = router;
