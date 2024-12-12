@@ -10,6 +10,8 @@ const morgan = require('morgan');
 const bodyParser = require("body-parser");
 const router = express.Router();
 const validator = require('validator')
+// const sequelize = require('./database');
+// const contactRoutes = require('./routesKontak');
 // const { validateInput } = require('./validate');
 
 // const { validateForm } = require('create');
